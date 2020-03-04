@@ -1,0 +1,56 @@
+﻿<Window x:Class="NFLStats.Primary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NFLStats"
+        mc:Ignorable="d"
+        Title="Primary" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Name="window" SizeChanged="Window_SizeChanged"
+        MinHeight="450" MinWidth="800"
+        ResizeMode="CanResizeWithGrip">
+    <Canvas x:Name="myCanvas">
+        <Grid Background="#FF9E9C9C" Height="419" Width="792">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="2" Background="LightGray" Orientation="Vertical" VerticalAlignment="Center">
+            <Button Content="Player Stats" FontSize="15" Height="30" Width="140" Margin="8" Click="DisplayPlayerStats" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Content="Live Scores" FontSize="15" Height="30" Width="140" Margin="8" Click="DisplayAllScores" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Content="Settings" FontSize="15" Height="30" Width="140" Margin="8" Click="DisplaySettings" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </StackPanel>
+    
+        <StackPanel Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3">
+            <StackPanel x:Name="panel" HorizontalAlignment="Center" Height="150" Width="406" Margin="36,-30"/>
+        </StackPanel>
+            <StackPanel x:Name="qb1" HorizontalAlignment="Left" Height="209" Margin="37,0,0,0" Grid.Row="3" Grid.RowSpan="3" VerticalAlignment="Top" Width="249" Grid.ColumnSpan="2" Background="White">
+                <Label x:Name="player1" Margin="10" FontSize="22" FontWeight="Bold" Background="Transparent" BorderBrush="Black" BorderThickness="1.0">Aaron Rodgers</Label>
+                    <TextBlock x:Name="yd1" Margin="10" FontSize="20">Passing Yards:</TextBlock>
+            <TextBlock x:Name="td1" Margin="10" FontSize="20">Touchdowns:</TextBlock>
+            <TextBlock x:Name="misc1" Margin="10" FontSize="20">Interceptions:</TextBlock>
+        </StackPanel>
+
+            <StackPanel x:Name="qb2" HorizontalAlignment="Left" Height="210" Margin="35,0,0,0" Grid.Row="3" Grid.RowSpan="3" VerticalAlignment="Top" Width="254" Grid.ColumnSpan="2" Background="White" Grid.Column="3">
+                <Label x:Name="player2" Margin="10" FontSize="22" Content="Aaron Rodgers" FontWeight="Bold" BorderBrush="Black" BorderThickness="1.0"/>
+                <TextBlock x:Name="yd2" Margin="10" FontSize="20"><Run Text="Passing Yards: "/></TextBlock>
+            <TextBlock x:Name="td2" Margin="10" FontSize="20"><Run Text="Touchdowns: "/></TextBlock>
+            <TextBlock x:Name="misc2" Margin="10" FontSize="20"><Run Text="Interceptions: "/></TextBlock>
+        </StackPanel>
+
+    </Grid>
+    </Canvas>
+</Window>

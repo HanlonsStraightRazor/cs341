@@ -1,0 +1,24 @@
+﻿<Window x:Class="NFLStats.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NFLStats"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="LoginPage" Height="309.6" Width="274.4">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FF011340" Offset="0.993"/>
+            <GradientStop Color="#FFC96F14" Offset="0.224"/>
+            <GradientStop Color="#FF0046FF" Offset="0.767"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <TextBox Name="UsernameBox" HorizontalAlignment="Left" Height="23" Margin="75,37,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120" BorderBrush="#FF000206" GotFocus="UsernameBox_GotFocus" Background="{x:Null}"/>
+        <Button Content="Log In" HorizontalAlignment="Left" Margin="75,93,0,0" VerticalAlignment="Top" Width="120" Background="#FF2540BD" Click="LogInClick"/>
+        <Button Content="Register" HorizontalAlignment="Left" Margin="75,238,0,0" VerticalAlignment="Top" Width="120" Background="#FF9E8204" Click="RegisterClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="75,220,0,0" TextWrapping="Wrap" Text="New Members Click Here" VerticalAlignment="Top" Width="120" FontSize="10" TextAlignment="Center" Background="#FFFFD102"/>
+        <PasswordBox Name ="PasswordBoxBox" PasswordChar="*" HorizontalAlignment="Left" Height="23" Margin="75,65,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="#FF000002" KeyDown="PasswordBoxBox_KeyDown"/>
+    </Grid>
+</Window>
